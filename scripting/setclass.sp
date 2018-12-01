@@ -31,8 +31,8 @@ public void OnPluginStart() {
 	hChat = CreateConVar("sm_setclass_chat", "1", "Enable/Disable(1/0) Showing setclass changes in chat", FCVAR_NOTIFY);
 	hLog = CreateConVar("sm_setclass_log", "1", "Enable/Disable(1/0) Logging of setclass changes", FCVAR_NOTIFY);
 	
-	RegAdminCmd("sm_setclass", Command_Setclass, ADMFLAG_SLAY, "Usage: sm_setclass \"target\" \"class\"");
-	RegConsoleCmd("sm_class", Command_SetMyClass, "Usage: sm_class \"class\"");
+	RegAdminCmd("sm_setclass", Command_Setclass, ADMFLAG_GENERIC, "Usage: sm_setclass \"target\" \"class\"");
+	RegAdminCmd("sm_class", Command_SetMyClass, ADMFLAG_GENERIC, "Usage: sm_class \"class\"");
 
 	LoadTranslations("common.phrases");
 }
