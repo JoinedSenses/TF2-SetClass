@@ -81,7 +81,7 @@ public Action Command_Setclass(int client, int args) {
 					}
 				}
 				Event event = CreateEvent("player_changeclass", true);
-				event.SetInt("userid", GetClientUserId(client));
+				event.SetInt("userid", GetClientUserId(i));
 				event.SetInt("class", view_as<int>(class));
 				event.Fire();
 			}
